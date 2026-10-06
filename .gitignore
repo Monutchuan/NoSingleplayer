@@ -1,0 +1,23 @@
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# IntelliJ
+*.ipr
+*.iml
+*.iws
+.idea/
+
+# Gradle
+build/
+.gradle/
+
+# Forge run dir
+run/
+out/
+
+# OS
+Thumbs.db
+.DS_Store

@@ -1,0 +1,15 @@
+[
+  {
+    "modid": "nosingleplayer",
+    "name": "No Singleplayer",
+    "description": "A Forge mod that removes or disables the Singleplayer button.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateJSON": "",
+    "authorList": ["Monutchuan"],
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
