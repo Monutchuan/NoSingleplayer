@@ -28,17 +28,17 @@ Valid values: `remove` (or anything unrecognized falls back to `remove`) and `di
 
 ## Build
 
-This project uses ForgeGradle 2.3.2. The Gradle wrapper jar is **not** committed, so grab it from the official Forge 1.12.2 MDK first:
+This project uses ForgeGradle 2.3.2 and ships with the Gradle wrapper (`gradlew` / `gradlew.bat` / `gradle/wrapper/gradle-wrapper.jar`), so a local Gradle install is **not** required.
 
-1. Download `forge-1.12.2-14.23.5.2847-mdk` from [files.minecraftforge.net](https://files.minecraftforge.net).
-2. Copy `gradlew`, `gradlew.bat`, and `gradle/wrapper/gradle-wrapper.jar` from the MDK into this project's root.
-3. Run:
+```bash
+./gradlew build
+```
 
-   ```bash
-   ./gradlew build
-   ```
+The first build downloads Minecraft 1.12.2, Forge 1.12.2-14.23.5.2847 and the MCP mappings, then decompiles/recompiles and packages the mod. The built jar is at:
 
-The built jar is at `build/libs/OnlyMultiplayer-1.12.2-1.0.0.jar`.
+```
+build/libs/OnlyMultiplayer-1.12.2-1.0.0.jar
+```
 
 ## Install
 
