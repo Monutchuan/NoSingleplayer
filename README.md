@@ -71,6 +71,7 @@ Drop the built jar into your Minecraft client's `mods/` folder (`.minecraft/mods
 ## Notes
 
 - Original clean-room implementation. No third-party dependencies.
+- All in-game text uses vanilla Minecraft language keys (`connect.connecting`, `menu.quit`, `multiplayer.connect`, ...), so localization is handled by the game itself — there are no custom language files to maintain.
 - `clientSideOnly = true` in the `@Mod` annotation, so it is simply skipped on a dedicated server.
 - The resource-pack policy is attached to the auto-connect entry (`ServerData`), so it only affects this connection and does not change the client's global setting.
 

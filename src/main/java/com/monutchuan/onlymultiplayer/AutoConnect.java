@@ -64,7 +64,7 @@ public class AutoConnect
         buttons.remove(back);
         int y = back.y;
         buttons.add(new GuiButton(BUTTON_RETRY, gui.width / 2 - 100, y, 98, 20,
-                OnlyMultiplayer.tr("onlymultiplayer.gui.reconnect", "重试", "Retry")));
+                I18n.format("multiplayer.connect")));
         buttons.add(new GuiButton(BUTTON_QUIT, gui.width / 2 + 2, y, 98, 20,
                 I18n.format("menu.quit")));
     }
