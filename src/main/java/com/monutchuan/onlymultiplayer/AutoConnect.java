@@ -36,7 +36,7 @@ public class AutoConnect
 
         //直接换成过渡界面，主菜单连一帧都不显示，玩家开机后看到的第一屏就是连接状态。
         attempted = true;
-        event.setGui(new GuiAutoConnecting());
+        event.setGui(new GuiConnectingSplash());
     }
 
     @SubscribeEvent

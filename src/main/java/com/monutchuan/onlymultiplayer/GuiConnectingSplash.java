@@ -8,7 +8,7 @@ import net.minecraft.client.resources.I18n;
 
 //启动时的过渡界面：主菜单被它顶掉，玩家打开游戏后看到的第一屏就是“正在连接 …”。
 //它只负责把界面立刻画出来，真正的连接交给下一帧，免得在 initGui 里换屏。
-public class GuiAutoConnecting extends GuiScreen
+public class GuiConnectingSplash extends GuiScreen
 {
     private boolean started = false;
 
@@ -29,7 +29,7 @@ public class GuiAutoConnecting extends GuiScreen
             public void run()
             {
                 //玩家可能在下一帧之前就按了 Esc 或点了退出，这时不要再把他拽去做连接。
-                if (Minecraft.getMinecraft().currentScreen == GuiAutoConnecting.this)
+                if (Minecraft.getMinecraft().currentScreen == GuiConnectingSplash.this)
                     AutoConnect.connect(Minecraft.getMinecraft());
             }
         });
