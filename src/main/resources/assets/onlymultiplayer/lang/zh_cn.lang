@@ -1,4 +1,1 @@
-onlymultiplayer.gui.disconnected=连接已断开
-onlymultiplayer.gui.hint=确认服务器是否在线，然后重试。
 onlymultiplayer.gui.reconnect=重试
-onlymultiplayer.gui.quit=退出游戏

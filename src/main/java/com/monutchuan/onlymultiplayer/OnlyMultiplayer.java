@@ -1,5 +1,8 @@
 package com.monutchuan.onlymultiplayer;
 
+import java.util.Locale;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.I18n;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -17,8 +20,8 @@ public class OnlyMultiplayer
     public static final String MODID = "onlymultiplayer";
     //显示名称带空格，和 Mod 列表里其他 Mod 的写法保持一致；modid 仍然必须是小写且无空格。
     public static final String NAME = "Only Multiplayer";
-    //Mod 列表里显示成“Version: 1.0.0 (1.0.0)”；jar 文件名仍由 build.gradle 的 version 决定。
-    public static final String VERSION = "1.0.0";
+    //Mod 列表里显示成“Version: 1.0.1 (1.0.1)”；jar 文件名仍由 build.gradle 的 version 决定。
+    public static final String VERSION = "1.0.1";
 
     //对主菜单“单人游戏”按钮的处理方式，由“config/onlymultiplayer.cfg”控制。
     //REMOVE = 移除按钮（预设值，直接不显示）
@@ -104,6 +107,18 @@ public class OnlyMultiplayer
     public static boolean hasServer()
     {
         return autoConnect && !serverHost.isEmpty();
+    }
+
+    //界面文案的统一入口：优先读语言文件；万一语言文件没被加载（某些客户端会挡掉 Mod 资源包），
+    //就用内置文案兜底，玩家不会在界面上看到 onlymultiplayer.gui.xxx 这种裸键名。
+    public static String tr(String key, String zh, String en)
+    {
+        String text = I18n.format(key);
+        if (!key.equals(text))
+            return text;
+
+        String language = Minecraft.getMinecraft().gameSettings.language;
+        return language != null && language.toLowerCase(Locale.ROOT).startsWith("zh") ? zh : en;
     }
 
     //解析“主机”或“主机:端口”，端口缺失或非法时整串按主机名处理。

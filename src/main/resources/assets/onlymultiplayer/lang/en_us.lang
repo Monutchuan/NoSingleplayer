@@ -1,4 +1,1 @@
-onlymultiplayer.gui.disconnected=Connection lost
-onlymultiplayer.gui.hint=Check that the server is online, then try again.
 onlymultiplayer.gui.reconnect=Retry
-onlymultiplayer.gui.quit=Quit Game
