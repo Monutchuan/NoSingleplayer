@@ -1,4 +1,4 @@
-package com.monutchuan.nosingleplayer;
+package com.monutchuan.onlymultiplayer;
 
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiMainMenu;
@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 
 //纯客户端事件订阅：仅在客户端加载，监听GUI初始化完成事件。
-@Mod.EventBusSubscriber(modid = NoSingleplayer.MODID, value = Side.CLIENT)
+@Mod.EventBusSubscriber(modid = OnlyMultiplayer.MODID, value = Side.CLIENT)
 public class DisableSingleplayerButton
 {
 
@@ -34,7 +34,7 @@ public class DisableSingleplayerButton
             return;
 
         //按配置的模式处理按钮。
-        switch (NoSingleplayer.mode)
+        switch (OnlyMultiplayer.mode)
         {
             case REMOVE:
                 //移除按钮：直接从主介面移除，不显示“单人游戏”。

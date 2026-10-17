@@ -1,4 +1,4 @@
-package com.monutchuan.nosingleplayer;
+package com.monutchuan.onlymultiplayer;
 
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
@@ -6,19 +6,19 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod
 (
-        modid = NoSingleplayer.MODID,
-        name = NoSingleplayer.NAME,
-        version = NoSingleplayer.VERSION,
+        modid = OnlyMultiplayer.MODID,
+        name = OnlyMultiplayer.NAME,
+        version = OnlyMultiplayer.VERSION,
         clientSideOnly = true,
         acceptedMinecraftVersions = "[1.12.2]"
 )
-public class NoSingleplayer
+public class OnlyMultiplayer
 {
     public static final String MODID = "onlymultiplayer";
     public static final String NAME = "OnlyMultiplayer";
     public static final String VERSION = "1.12.2-1.0.0";
 
-    //对主菜单“单人游戏”按钮的处理方式，由“config/nosingleplayer.cfg”控制。
+    //对主菜单“单人游戏”按钮的处理方式，由“config/onlymultiplayer.cfg”控制。
     //REMOVE = 移除按钮（预设值，直接不显示）
     //DISABLE = 禁用按钮（不移除，但无法点击）
     public enum Mode {REMOVE, DISABLE}

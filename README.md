@@ -1,4 +1,4 @@
-# NoSingleplayer
+# OnlyMultiplayer
 
 A **client-side Forge mod** for Minecraft 1.12.2 that suppresses the **Singleplayer** button on the main menu.
 
@@ -15,14 +15,14 @@ When the main menu (`GuiMainMenu`) opens, the mod finds the `menu.singleplayer` 
 
 ## Configuration
 
-The mode is controlled by `config/nosingleplayer.cfg` (created on first launch):
+The mode is controlled by `config/onlymultiplayer.cfg` (created on first launch):
 
 ```cfg
 # How to handle the Singleplayer button: 'remove' = hide it entirely, 'disable' = grey it out but keep it visible.
 mode=remove
 ```
 
-You can also change it in-game from the **Mods** list → select *No Singleplayer* → **Config**.
+You can also change it in-game from the **Mods** list → select *OnlyMultiplayer* → **Config**.
 
 Valid values: `remove` (or anything unrecognized falls back to `remove`) and `disable`.
 
@@ -38,7 +38,7 @@ This project uses ForgeGradle 2.3.2. The Gradle wrapper jar is **not** committed
    ./gradlew build
    ```
 
-The built jar is at `build/libs/NoSingleplayer-1.12.2-1.0.0.jar`.
+The built jar is at `build/libs/OnlyMultiplayer-1.12.2-1.0.0.jar`.
 
 ## Install
 
