@@ -15,7 +15,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class OnlyMultiplayer
 {
     public static final String MODID = "onlymultiplayer";
-    public static final String NAME = "OnlyMultiplayer";
+    //显示名称带空格，和 Mod 列表里其他 Mod 的写法保持一致；modid 仍然必须是小写且无空格。
+    public static final String NAME = "Only Multiplayer";
     public static final String VERSION = "1.12.2-1.0.0";
 
     //对主菜单“单人游戏”按钮的处理方式，由“config/onlymultiplayer.cfg”控制。

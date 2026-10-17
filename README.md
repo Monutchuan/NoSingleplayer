@@ -22,7 +22,7 @@ The mode is controlled by `config/onlymultiplayer.cfg` (created on first launch)
 mode=remove
 ```
 
-You can also change it in-game from the **Mods** list → select *OnlyMultiplayer* → **Config**.
+You can also change it in-game from the **Mods** list → select *Only Multiplayer* → **Config**.
 
 Valid values: `remove` (or anything unrecognized falls back to `remove`) and `disable`.
 
