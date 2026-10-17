@@ -12,6 +12,8 @@ import net.minecraftforge.fml.relauncher.Side;
 @Mod.EventBusSubscriber(modid = OnlyMultiplayer.MODID, value = Side.CLIENT)
 public class DisableSingleplayerButton
 {
+    //主菜单按钮的行距（原版每行相隔 24 像素）。
+    private static final int ROW_HEIGHT = 24;
 
     @SubscribeEvent
     public static void onGuiInit(GuiScreenEvent.InitGuiEvent.Post event)
@@ -38,7 +40,15 @@ public class DisableSingleplayerButton
         {
             case REMOVE:
                 //移除按钮：直接从主介面移除，不显示“单人游戏”。
+                //按钮组是绝对坐标排布的，单纯删掉会空出一整行，所以把下方的按钮整体上移一行。
+                int removedY = singleplayer.y;
                 event.getButtonList().remove(singleplayer);
+                for (GuiButton button : event.getButtonList())
+                {
+                    //只动主菜单按钮组（同一列、且在被移除按钮下方几行内），避免影响右上角的图标按钮。
+                    if (button.y > removedY && button.y <= removedY + ROW_HEIGHT * 4)
+                        button.y -= ROW_HEIGHT;
+                }
                 break;
             case DISABLE:
                 //禁用按钮：保留按钮但无法点击（enabled=false）。
