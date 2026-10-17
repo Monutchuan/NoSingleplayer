@@ -3,7 +3,7 @@
     "modid": "onlymultiplayer",
     "name": "Only Multiplayer",
     "description": "Removes or disables the Singleplayer button, and can join a server automatically on startup.",
-    "version": "1.0.1",
+    "version": "1.0.0",
     "mcversion": "${mcversion}",
     "url": "",
     "updateJSON": "",

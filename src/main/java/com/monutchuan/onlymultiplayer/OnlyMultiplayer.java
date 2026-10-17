@@ -20,8 +20,9 @@ public class OnlyMultiplayer
     public static final String MODID = "onlymultiplayer";
     //显示名称带空格，和 Mod 列表里其他 Mod 的写法保持一致；modid 仍然必须是小写且无空格。
     public static final String NAME = "Only Multiplayer";
-    //Mod 列表里显示成“Version: 1.0.1 (1.0.1)”；jar 文件名仍由 build.gradle 的 version 决定。
-    public static final String VERSION = "1.0.1";
+    //Mod 列表里显示成“Version: 1.0.0 (1.0.0)”；jar 文件名仍由 build.gradle 的 version 决定。
+    //内部测试阶段版本号不涨，改功能也还是 1.0.0。
+    public static final String VERSION = "1.0.0";
 
     //对主菜单“单人游戏”按钮的处理方式，由“config/onlymultiplayer.cfg”控制。
     //REMOVE = 移除按钮（预设值，直接不显示）

@@ -20,6 +20,7 @@ When the main menu (`GuiMainMenu`) opens, the mod finds the `menu.singleplayer` 
 When `autoConnect` is on and `serverAddress` is set, the main menu is replaced by a **connecting screen** the moment it would appear, so the player sees the server address instead of a menu flash.
 
 - **Player disconnects on purpose** (pause menu → *Disconnect*): the game closes instead of dropping back to the server list.
+- **Player aborts while connecting**: the single button on the connecting screen reads *Quit Game* and closes the game; there is no way back to the server list or the main menu.
 - **Connection lost / kicked / server unreachable**: the vanilla disconnect screen is kept, so the server's own message (wrong version, whitelist, ban reason, ...) is still shown — only its single *Back* button is replaced with **Retry** and **Quit Game**.
 - `resourcePack` controls how server resource packs are handled: `allow` accepts them without asking, `prompt` asks the player (vanilla behaviour), `deny` refuses them.
 
@@ -58,10 +59,10 @@ This project uses ForgeGradle 2.3.2 and ships with the Gradle wrapper (`gradlew`
 The first build downloads Minecraft 1.12.2, Forge 1.12.2-14.23.5.2847 and the MCP mappings, then decompiles/recompiles and packages the mod. The built jar is at:
 
 ```
-build/libs/OnlyMultiplayer-1.12.2-1.0.1.jar
+build/libs/OnlyMultiplayer-1.12.2-1.0.0.jar
 ```
 
-The jar name keeps the Minecraft version; the version shown in the Mods list is the mod version (`1.0.1`).
+The jar name keeps the Minecraft version; the version shown in the Mods list is the mod version (`1.0.0`).
 
 ## Install
 

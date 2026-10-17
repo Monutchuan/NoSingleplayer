@@ -7,7 +7,6 @@ import net.minecraft.client.gui.GuiDisconnected;
 import net.minecraft.client.gui.GuiIngameMenu;
 import net.minecraft.client.gui.GuiMainMenu;
 import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.client.multiplayer.GuiConnecting;
 import net.minecraft.client.multiplayer.ServerData;
 import net.minecraft.client.resources.I18n;
 import net.minecraftforge.client.event.GuiOpenEvent;
@@ -120,7 +119,8 @@ public class AutoConnect
         ServerData data = new ServerData(address, address, false);
         data.setResourceMode(toResourceMode(OnlyMultiplayer.resourcePack));
 
-        mc.displayGuiScreen(new GuiConnecting(new GuiMainMenu(), mc, data));
+        //用自己的一层：原版连接界面的“取消”会退回服务器列表，再一步就是主菜单。
+        mc.displayGuiScreen(new GuiServerConnecting(mc, data));
     }
 
     private static ServerData.ServerResourceMode toResourceMode(OnlyMultiplayer.ResourcePackPolicy policy)
