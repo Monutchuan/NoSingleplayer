@@ -2,8 +2,8 @@
   {
     "modid": "onlymultiplayer",
     "name": "Only Multiplayer",
-    "description": "A Forge mod that removes or disables the Singleplayer button.",
-    "version": "${version}",
+    "description": "Removes or disables the Singleplayer button, and can join a server automatically on startup.",
+    "version": "1.0.0",
     "mcversion": "${mcversion}",
     "url": "",
     "updateJSON": "",

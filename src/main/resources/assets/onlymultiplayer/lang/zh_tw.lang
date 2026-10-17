@@ -1,0 +1,4 @@
+onlymultiplayer.gui.disconnected=連線已中斷
+onlymultiplayer.gui.hint=確認伺服器是否在線，然後重試。
+onlymultiplayer.gui.reconnect=重試
+onlymultiplayer.gui.quit=離開遊戲
