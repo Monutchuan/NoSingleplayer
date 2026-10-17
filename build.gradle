@@ -19,6 +19,12 @@ archivesBaseName = 'OnlyMultiplayer'
 
 sourceCompatibility = targetCompatibility = '1.8'
 
+//源文件是 UTF-8，必须显式告诉 javac；否则在中文 Windows 上会按 GBK 读，中文注释直接编译失败。
+tasks.withType(JavaCompile)
+{
+    options.encoding = 'UTF-8'
+}
+
 minecraft
 {
     version = '1.12.2-14.23.5.2847'

@@ -40,14 +40,15 @@ public class DisableSingleplayerButton
         {
             case REMOVE:
                 //移除按钮：直接从主介面移除，不显示“单人游戏”。
-                //按钮组是绝对坐标排布的，单纯删掉会空出一整行，所以把下方的按钮整体上移一行。
+                //按钮组是绝对坐标排布的，单纯删掉会空出一整行。
+                //只上移半行，让剩下的三行落在原来四行占据的区域中间，不会显得太靠上。
                 int removedY = singleplayer.y;
                 event.getButtonList().remove(singleplayer);
                 for (GuiButton button : event.getButtonList())
                 {
                     //只动主菜单按钮组（同一列、且在被移除按钮下方几行内），避免影响右上角的图标按钮。
                     if (button.y > removedY && button.y <= removedY + ROW_HEIGHT * 4)
-                        button.y -= ROW_HEIGHT;
+                        button.y -= ROW_HEIGHT / 2;
                 }
                 break;
             case DISABLE:
